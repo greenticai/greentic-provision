@@ -1,6 +1,6 @@
 # GPROV-PR-01 — Create `greentic-provision` core engine (generic setup runner)
 
-REPO: greentic-ai/greentic-provision (new repo)
+REPO: greenticai/greentic-provision (new repo)
 
 GOAL
 Create a reusable provisioning engine that can run provider setup “wizards” contained in packs (messaging/events/secrets provider extension packs), without being domain-specific.
@@ -103,3 +103,4 @@ ACCEPTANCE CRITERIA
 - Repo builds and `cargo test` passes
 - `greentic-provision pack inspect --pack messaging-telegram.gtpack` (or any pack with setup entry) prints a descriptor (manual check)
 - Dry-run produces a deterministic JSON output shape (even if empty patches in PR-01)
+
