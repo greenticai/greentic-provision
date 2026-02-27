@@ -1,6 +1,6 @@
 # GPROV-PR-04 — Provision conformance suite + fuzz/mutation tests (10x bug discovery)
 
-REPO: greentic-ai/greentic-provision
+REPO: greenticai/greentic-provision
 
 GOAL
 Prevent non-functional setup flows from shipping by adding:
@@ -59,3 +59,4 @@ ACCEPTANCE CRITERIA
 - Conformance run produces a stable report across runs
 - Failures produce reproducible artifacts
 - Fuzz tests run within a reasonable time budget and catch panics
+
