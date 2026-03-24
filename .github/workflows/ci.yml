@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-      - master
+      - main
 
 jobs:
   local-check:
@@ -45,7 +45,7 @@ jobs:
         run: greentic-integration-tester run --gtest tests/gtests/README --artifacts-dir artifacts/readme-gtests --workdir . --prepend-path target/debug --errors
 
   build-artifacts:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: local-check
     runs-on: ${{ matrix.os }}
     strategy:
@@ -96,7 +96,7 @@ jobs:
           path: dist/*
 
   publish:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build-artifacts
     runs-on: ubuntu-latest
     steps:
