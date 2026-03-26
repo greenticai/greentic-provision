@@ -1,22 +1,32 @@
 name: CI
+on:
+  workflow_call:
+  push:
+    branches: [main]
+  pull_request:
+
 permissions:
   contents: write
 
-on:
-  pull_request:
-  push:
-    branches:
-      - main
-      - main
-
 jobs:
-  local-check:
+  ci:
+    uses: greenticai/.github/.github/workflows/host-crate-ci.yml@main
+
+  conformance:
     runs-on: ubuntu-latest
+    needs: [ci]
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
-      - name: Run local checks
-        run: bash ci/local_check.sh
+      - uses: Swatinem/rust-cache@v2
+      - name: Run conformance checks
+        run: |
+          FIXTURE_PACK="tests/fixtures/packs/noop-provision.gtpack"
+          if [ -e "$FIXTURE_PACK" ]; then
+            cargo run -p greentic-provision -- conformance --packs tests/fixtures/packs --report target/conformance.json
+          else
+            echo "fixtures not present yet; skipping conformance"
+          fi
 
   readme-gtests:
     runs-on: ubuntu-latest
@@ -46,7 +56,7 @@ jobs:
 
   build-artifacts:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: local-check
+    needs: [ci]
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -97,7 +107,7 @@ jobs:
 
   publish:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: build-artifacts
+    needs: [build-artifacts]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
