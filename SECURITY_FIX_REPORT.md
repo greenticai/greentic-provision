@@ -1,30 +1,23 @@
 # Security Fix Report
 
-Date: 2026-03-27 (UTC)
+Date: 2026-03-30 (UTC)
+Branch: `feat/codeql`
 
-## Input Alerts
+## Inputs Reviewed
 - Dependabot alerts: `0`
 - Code scanning alerts: `0`
 - New PR dependency vulnerabilities: `0`
 
-## Repository Checks Performed
-- Reviewed dependency manifests in repository:
-  - `Cargo.toml`
-  - `Cargo.lock`
-  - `crates/greentic-provision-cli/Cargo.toml`
-  - `crates/greentic-provision-core/Cargo.toml`
-- Checked current workspace changes with `git status --short`.
-- Confirmed there are no provided PR dependency vulnerability entries to remediate.
-
-## Findings
-- No security alerts were provided for remediation.
-- No newly reported dependency vulnerabilities were provided.
-- No dependency-file modifications were detected in the current workspace that required a security patch.
+## PR Dependency Change Review
+Compared this branch against `origin/main`:
+- Changed files: `.github/workflows/codeql.yml`
+- Dependency manifest/lockfile changes: none
+  - No changes detected in `Cargo.toml`, `Cargo.lock`, or other supported dependency files.
 
 ## Remediation Actions
-- No code or dependency changes were required.
-- Added this report file for CI/security-review traceability.
+- No vulnerabilities were present in the provided alert data.
+- No new dependency vulnerabilities were introduced by this PR.
+- No dependency or code remediation changes were required.
 
-## Notes
-- Attempted local Rust advisory tooling checks (`cargo-audit`, `cargo-deny`), but those tools were not available in this CI environment.
-- Given empty alert inputs and no reported PR dependency vulnerabilities, no safe minimal fix was applicable.
+## Result
+No security fixes were applied because no actionable vulnerabilities were identified.
