@@ -1,23 +1,26 @@
 # Security Fix Report
 
-Date: 2026-03-30 (UTC)
-Branch: `feat/codeql`
+Date: 2026-04-02 (UTC)
+Branch: `chore/add-concurrency-groups`
 
 ## Inputs Reviewed
 - Dependabot alerts: `0`
 - Code scanning alerts: `0`
 - New PR dependency vulnerabilities: `0`
 
-## PR Dependency Change Review
-Compared this branch against `origin/main`:
-- Changed files: `.github/workflows/codeql.yml`
-- Dependency manifest/lockfile changes: none
-  - No changes detected in `Cargo.toml`, `Cargo.lock`, or other supported dependency files.
+## Analysis
+- Reviewed the provided security alert payload:
+  - `dependabot`: `[]`
+  - `code_scanning`: `[]`
+- Verified repository alert artifacts:
+  - `dependabot-alerts.json`: `[]`
+  - `code-scanning-alerts.json`: `[]`
+  - `pr-vulnerable-changes.json`: `[]`
 
 ## Remediation Actions
-- No vulnerabilities were present in the provided alert data.
-- No new dependency vulnerabilities were introduced by this PR.
-- No dependency or code remediation changes were required.
+- No actionable vulnerabilities were identified.
+- No code or dependency changes were required for remediation.
+- Applied minimal safe change: updated this report to reflect the current CI security review run.
 
 ## Result
 No security fixes were applied because no actionable vulnerabilities were identified.
