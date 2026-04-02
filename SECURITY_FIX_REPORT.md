@@ -1,26 +1,21 @@
 # Security Fix Report
 
 Date: 2026-04-02 (UTC)
-Branch: `chore/add-concurrency-groups`
 
 ## Inputs Reviewed
 - Dependabot alerts: `0`
 - Code scanning alerts: `0`
-- New PR dependency vulnerabilities: `0`
 
 ## Analysis
-- Reviewed the provided security alert payload:
+- Reviewed provided security alerts JSON:
   - `dependabot`: `[]`
   - `code_scanning`: `[]`
-- Verified repository alert artifacts:
-  - `dependabot-alerts.json`: `[]`
-  - `code-scanning-alerts.json`: `[]`
-  - `pr-vulnerable-changes.json`: `[]`
+- No actionable vulnerabilities were present to remediate.
 
 ## Remediation Actions
-- No actionable vulnerabilities were identified.
-- No code or dependency changes were required for remediation.
-- Applied minimal safe change: updated this report to reflect the current CI security review run.
+- No code changes were required.
+- No dependency updates were required.
+- Applied minimal safe action: documented this security review outcome.
 
 ## Result
-No security fixes were applied because no actionable vulnerabilities were identified.
+No security fixes were applied because no security alerts were reported in this CI run.
