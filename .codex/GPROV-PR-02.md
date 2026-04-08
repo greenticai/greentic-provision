@@ -1,6 +1,6 @@
 # GPROV-PR-02 — Add integrations: config, secrets, oauth, subscriptions adapters (apply engine)
 
-REPO: greentic-ai/greentic-provision
+REPO: greenticai/greentic-provision
 
 GOAL
 Implement the “apply” side of provisioning:
@@ -69,3 +69,4 @@ ACCEPTANCE CRITERIA
 - End-to-end dry-run + apply works using in-memory stores
 - Install records are created/updated deterministically
 - No secret values printed
+

@@ -1,6 +1,6 @@
 # GPROV-PR-03 — Wasmtime executor for provisioning flows in packs (sandboxed)
 
-REPO: greentic-ai/greentic-provision
+REPO: greenticai/greentic-provision
 
 GOAL
 Implement an executor that can run provisioning steps defined inside packs as WASM components/flows, in a strict sandbox.
@@ -61,3 +61,4 @@ ACCEPTANCE CRITERIA
 - `greentic-provision dry-run setup --pack <pack.gtpack>` runs real WASM steps and returns a plan.
 - No filesystem/network by default.
 - Timeouts prevent hangs.
+
