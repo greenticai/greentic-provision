@@ -32,9 +32,14 @@ assert_cmd = "2"
 predicates = "3"
 
 [package.metadata.binstall]
-pkg-url = "https://github.com/greentic-ai/greentic-provision/releases/download/v{version}/greentic-provision-{version}-{target}.tar.gz"
+pkg-url = "{ repo }/releases/download/v{ version }/{ name }-v{ version }-{ target }.tgz"
 pkg-fmt = "tgz"
-
-[package.metadata.binstall.overrides.x86_64-pc-windows-msvc]
-pkg-url = "https://github.com/greentic-ai/greentic-provision/releases/download/v{version}/greentic-provision-{version}-{target}.zip"
-pkg-fmt = "zip"
+bin-dir = "{ name }-v{ version }-{ target }/{ bin }{ binary-ext }"
+targets = [
+  "x86_64-unknown-linux-gnu",
+  "aarch64-unknown-linux-gnu",
+  "x86_64-apple-darwin",
+  "aarch64-apple-darwin",
+  "x86_64-pc-windows-msvc",
+  "aarch64-pc-windows-msvc",
+]
