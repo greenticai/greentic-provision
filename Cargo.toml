@@ -33,8 +33,9 @@ features = [
 ]
 
 [workspace.dependencies.wasmtime]
-version = "40"
+version = "43"
 default-features = false
 features = [
     "cranelift",
+    "runtime",
 ]
