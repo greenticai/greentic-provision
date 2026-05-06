@@ -6,7 +6,7 @@ members = [
 ]
 
 [workspace.package]
-version = "0.5.0-dev.1"
+version = "1.1.0-dev.0"
 edition = "2024"
 
 [workspace.dependencies]
@@ -16,9 +16,9 @@ wat = "1"
 tempfile = "3"
 zip = "7"
 ciborium = "0.2"
-greentic-types = "0.4"
-greentic-interfaces = "0.4"
-greentic-oauth-client = "0.4"
+greentic-types = ">=1.1.0-dev, <1.2.0-0"
+greentic-interfaces = ">=1.1.0-dev, <1.2.0-0"
+greentic-oauth-client = ">=1.1.0-dev, <1.2.0-0"
 
 [workspace.dependencies.serde]
 version = "1"
