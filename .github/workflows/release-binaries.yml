@@ -19,6 +19,7 @@ jobs:
     with:
       package: greentic-provision
       binary: greentic-provision
+      windows-archive-format: zip
       extra-files: |
         README.md
         LICENSE
