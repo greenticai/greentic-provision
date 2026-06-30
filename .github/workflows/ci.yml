@@ -49,8 +49,8 @@ jobs:
         if: steps.check.outputs.run == 'true'
         run: |
           cargo install cargo-binstall --locked
-          cargo binstall --no-confirm --force greentic-integration
-          cargo binstall --no-confirm greentic-integration-tester
+          cargo binstall --no-confirm --force greentic-integration --locked
+          cargo binstall --no-confirm greentic-integration-tester --locked --force
       - name: Build greentic-provision
         if: steps.check.outputs.run == 'true'
         run: cargo build -p greentic-provision
