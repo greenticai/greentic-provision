@@ -1093,9 +1093,9 @@ dependencies = [
 
 [[package]]
 name = "greentic-interfaces"
-version = "1.1.0-dev.27127755811"
+version = "1.2.0-dev.28927057031"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c529dbde9ec0a596469ebce690a45d4dce6bf6089925cf23924bcbb01882369c"
+checksum = "ae316b3326e3574d6438bd32de5a3937ae379afa12a034654b222d636616f8f1"
 dependencies = [
  "anyhow",
  "constant_time_eq 0.4.2",
@@ -1111,9 +1111,9 @@ dependencies = [
 
 [[package]]
 name = "greentic-oauth-client"
-version = "1.1.0-dev.26463001967"
+version = "1.2.0-dev.28928950615"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dbf6628779701ab4ea77fbd5eb86ea5a393a3db09a81a59d34c4483dd7936d70"
+checksum = "5ea03a2234b30f9af79311a64a63295766ff3baa3aba0894bbb1b42f166897ce"
 dependencies = [
  "reqwest",
  "serde",
@@ -1124,7 +1124,7 @@ dependencies = [
 
 [[package]]
 name = "greentic-provision"
-version = "1.1.1-dev.0"
+version = "1.2.0-dev.0"
 dependencies = [
  "assert_cmd",
  "ciborium",
@@ -1142,7 +1142,7 @@ dependencies = [
 
 [[package]]
 name = "greentic-provision-core"
-version = "1.1.1-dev.0"
+version = "1.2.0-dev.0"
 dependencies = [
  "greentic-interfaces",
  "greentic-oauth-client",
@@ -1156,9 +1156,9 @@ dependencies = [
 
 [[package]]
 name = "greentic-types"
-version = "1.1.0-dev.27836473437"
+version = "1.2.0-dev.28924494708"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8c40256c6908985ab2bfc60026cab7a3971bbbb5f18d7303f2fffb070f14f39"
+checksum = "1097d4d60cc94b3904caf7eb26f43f7c1c824a35cbbb7719c9c7c0472e501969"
 dependencies = [
  "anyhow",
  "blake3",
