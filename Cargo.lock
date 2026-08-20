@@ -1111,9 +1111,9 @@ dependencies = [
 
 [[package]]
 name = "greentic-oauth-client"
-version = "1.2.0-dev.32239818161"
+version = "1.2.0-dev.32252053282"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "33dc331e8606520fba7637f1452c4801c22f51e397e845b6a278479486b73127"
+checksum = "3ed81b5372df6d2d09c4090197cd89653d8b1128efdd03bd6482a02f714992cf"
 dependencies = [
  "reqwest",
  "serde",
